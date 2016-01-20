@@ -1,2 +1,4 @@
 import count from './lib/count';
-export {count};
+import headers from './lib/headers';
+
+export {count,headers};

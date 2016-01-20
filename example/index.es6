@@ -1,11 +1,12 @@
 "use strict";
-import {count} from '../';
+import {count,headers} from '../';
 
 /**
  * Created by yan on 16-1-20.
  */
 
 class App {
+  @headers
   @count
   handleRequest(req, res) {
     res.end('ok');
