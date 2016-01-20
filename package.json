@@ -1,0 +1,30 @@
+{
+  "name": "node-oneapm-decorators",
+  "version": "0.0.0",
+  "description": "ES7 decorators that can be used in your app to track performance",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "compile": "rimraf lib && rimraf index.js && babel index.es6 --out-file index.js && babel src --out-dir lib",
+    "example": "babel-node example/index.es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyvernnot/node-oneapm-decorators.git"
+  },
+  "keywords": [
+    "apm",
+    "decorators"
+  ],
+  "author": "wyvernnot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyvernnot/node-oneapm-decorators/issues"
+  },
+  "homepage": "https://github.com/wyvernnot/node-oneapm-decorators#readme",
+  "devDependencies": {
+    "rimraf": "^2.5.0"
+  }
+}
