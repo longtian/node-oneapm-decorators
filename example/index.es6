@@ -1,18 +1,6 @@
 "use strict";
-import {count,headers} from '../';
 
-/**
- * Created by yan on 16-1-20.
- */
-
-class App {
-  @headers
-  @count
-  handleRequest(req, res) {
-    res.end('ok');
-  }
-}
-
+import App from './App.es6';
 let app = new App();
 let server = require('http').createServer(app.handleRequest);
 

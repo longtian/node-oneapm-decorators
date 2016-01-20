@@ -5,11 +5,9 @@ This is currently an idea only.
 
 ## Usage
 
-```
-import {count} from 'oneapm-decorators';
-```
-
 ```js
+import {count,headers} from '../';
+
 class App {
 
   @headers
@@ -20,10 +18,18 @@ class App {
 }
 ```
 
+```js
+import App from './App.es6';
+let app = new App();
+let server = require('http').createServer(app.handleRequest);
+server.listen(3000);
+```
+
 ## How to run the demo
 
-```
-git clone
+```sh
+git clone git@github.com:wyvernnot/node-oneapm-decorators.git
+cd node-oneapm-decorators
 npm install
 npm run-script compile
 npm run-script example
