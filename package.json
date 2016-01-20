@@ -7,8 +7,10 @@
     "example": "example"
   },
   "scripts": {
-    "compile": "rimraf lib && rimraf index.js && babel index.es6 --out-file index.js && babel src --out-dir lib",
-    "example": "babel-node example/index.es6"
+    "preversion": "rimraf lib && rimraf index.js && babel index.es6 --out-file index.js && babel src --out-dir lib",
+    "prestart": "rimraf lib && rimraf index.js && babel index.es6 --out-file index.js && babel src --out-dir lib",
+    "release": "npm version patch && npm publish --reg=https://registry.npmjs.com",
+    "start": "babel-node example/index.es6"
   },
   "repository": {
     "type": "git",

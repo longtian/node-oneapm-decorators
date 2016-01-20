@@ -1,4 +1,5 @@
 import count from './lib/count';
-import headers from './lib/headers';
+import url from './lib/url';
+import useragent from './lib/useragent';
 
-export {count,headers};
+export {count,url,useragent};

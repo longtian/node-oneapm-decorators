@@ -4,7 +4,9 @@
 export default function (type, method, desc) {
   var old = desc.value;
   desc.value = function () {
-    console.log(`${method} is called`);
+    if (arguments[0].headers) {
+      console.log(`user-agent = ${arguments[0].headers['user-agent']}`);
+    }
     return old.apply(this, arguments);
   }
 }

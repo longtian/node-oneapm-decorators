@@ -1,8 +1,9 @@
-import {count,headers} from '../';
+import {count,url,useragent} from '../';
 
 export default class App {
-  @headers
   @count
+  @url
+  @useragent
   handleRequest(req, res) {
     res.end('ok');
   }

@@ -5,7 +5,7 @@ export default function (type, method, desc) {
   var old = desc.value;
   desc.value = function () {
     if (arguments[0].headers) {
-      console.log(arguments[0].headers['user-agent']);
+      console.log(`url = ${arguments[0].url}`);
     }
     return old.apply(this, arguments);
   }
