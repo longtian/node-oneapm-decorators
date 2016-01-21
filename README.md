@@ -73,6 +73,14 @@ npm install
 npm start
 ```
 
+## Summary
+
+- Set up an InfluxDB server
+- Set up Grafana to visualize metrics in InfluxDB
+- Import OneAPM decorators into your ES7 code
+- Compile and restart your server
+- Edit dashboards in Grafana to see charts
+
 ## License
 
 MIT
