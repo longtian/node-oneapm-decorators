@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="refresh" content="0.5">
+</head>
+<body>
+<pre id="out"></pre>
+</body>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('out').innerText = JSON.stringify(performance.timing, null, 2);
+
+        var timing = performance.timing.toJSON();
+        var data = [];
+        for (i in timing) {
+            var delta = timing[i] - timing["navigationStart"];
+            if (delta >= 0) {
+                data.push(i + "=" + delta)
+            }
+        }
+        navigator.sendBeacon('http://influxdb-longtian.myalauda.cn:11431/write?db=oneapm', 'frontend ' + data.join(","))
+    })
+</script>
+</html>

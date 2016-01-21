@@ -1,10 +1,15 @@
-import {count,url,useragent} from '../';
+import {count,url,useragent,influxdb} from '../';
+
+import {createReadStream} from 'fs';
+
+import path from 'path';
 
 export default class App {
   @count
   @url
   @useragent
+  @influxdb
   handleRequest(req, res) {
-    res.end('ok');
+    createReadStream(path.join(__dirname, 'index.html')).pipe(res);
   }
 }
