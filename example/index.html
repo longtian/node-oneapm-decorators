@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta http-equiv="refresh" content="0.5">
+    <meta http-equiv="refresh" content="3">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css"/>
 </head>
 <body>
 <pre id="out"></pre>
 </body>
+<img src="http://placehold.it/350x150">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('out').innerText = JSON.stringify(performance.timing, null, 2);
@@ -22,5 +26,11 @@
         }
         navigator.sendBeacon('http://influxdb-longtian.myalauda.cn:11431/write?db=oneapm', 'frontend ' + data.join(","))
     })
+
+    var begin = Date.now();
+    while (Date.now() - begin < 1000) {
+
+    }
+
 </script>
 </html>
