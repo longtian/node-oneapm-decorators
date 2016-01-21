@@ -1,6 +1,6 @@
 {
   "name": "oneapm-decorators",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ES7 decorators that can be used in your app to track performance",
   "main": "index.js",
   "directories": {
