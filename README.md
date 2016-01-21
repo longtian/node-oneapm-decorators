@@ -21,9 +21,10 @@ export default class App {
 Here is how you start the server
 
 ```js
+import {createServer} from 'http';
 import App from './App.es6';
 let app = new App();
-let server = require('http').createServer(app.handleRequest);
+let server = createServer(app.handleRequest);
 server.listen(3000);
 ```
 
