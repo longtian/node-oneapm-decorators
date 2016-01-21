@@ -1,7 +1,7 @@
 # node-oneapm-decorators
 ES7 decorators that can be used in your app to track performance
 
-[![](https://img.shields.io/npm/v/node-oneapm-decorators.svg?style=flat-square)](https://www.npmjs.com/package/node-oneapm-decorators)
+[![](https://img.shields.io/npm/v/oneapm-decorators.svg?style=flat-square)](https://www.npmjs.com/package/oneapm-decorators)
 ![](https://img.shields.io/badge/version-alpha-red.svg?style=flat-square)
 
 If you are writting a NodeJS application in ES6(7), you can use this module to track your application performance very easily.
