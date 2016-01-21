@@ -25,12 +25,13 @@ export default class App {
 ### App with APM Decorators
 
 ```js
-import {count,url,useragent} from '../';
+import {count,url,useragent,influxdb} from '../';
 
 export default class App {
   @headers
   @url
   @useragent
+  @influxdb
   handleRequest(req, res) {
     res.end('ok');
   }
@@ -44,6 +45,10 @@ handleRequest is called
 url = /
 user-agent = Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/47.0.2526.106 Chrome/47.0.2526.106 Safari/537.36
 ```
+
+And it will continue to flush performance data into InfluxDB, which can be visualized using Grafana
+
+![](doc/screenshot_grafana.png)
 
 ## How to run the demo
 
